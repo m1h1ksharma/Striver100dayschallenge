@@ -1,0 +1,407 @@
+//Pattern 1
+public class Solution {
+    public static void nForest(int n) {
+        // Write your code here
+        for(int i=0;i<n;i++)
+        {
+            for(int j=0;j<n;j++)
+            {
+                System.out.print('*' + " ");
+            }
+            System.out.println();
+        }
+    }
+
+//Pattern 2
+
+    public static void nForest(int n) {
+        // Write your code here
+        for(int i=0;i<n;i++)
+        {
+            for(int j=n;j>=n-i;j--)
+            {
+                System.out.print("*"+ " ");
+            }
+            System.out.println();
+        }
+    }
+
+//Pattern 3
+
+    public static void nTriangle(int n) {
+        // Write your code here
+         for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=i;j++)
+            {
+                System.out.print(j+ " ");
+            }
+            System.out.println();
+        }
+    }
+  //Pattern 4
+    public static void nTriangle(int n) {
+        // Write your code here
+         for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=i;j++)
+            {
+                System.out.print(i+ " ");
+            }
+            System.out.println();
+        }
+    }
+  //Pattern 5
+   public static void seeding(int n) {
+        // Write your code here
+          for(int i=0;i<n;i++)
+        {
+            for(int j=0;j<n-i;j++)
+            {
+                System.out.print("*" + " ");
+            }
+            System.out.println();
+        }
+    }
+  //Pattern 6
+   public static void nNumberTriangle(int n) {
+        // Write your code here
+          for(int i=0;i<n;i++)
+        {
+            for(int j=1;j<=n-i;j++)
+            {
+                System.out.print(j + " ");
+            }
+            System.out.println();
+        }
+    }
+  //Pattern 7
+  public static void nStarTriangle(int n) {
+        // Write your code here
+        
+        for(int i=0;i<n;i++)
+        {
+            for(int j=1;j<n-i;j++)
+            {
+                System.out.print(" ");
+            }
+            for(int k=0;k<2*i+1;k++)
+            {
+                System.out.print("*");
+            }
+            System.out.println(); 
+        }
+    }
+  //Pattern 8
+    public static void nStarTriangle(int n) {
+        // Write your code here
+        
+        for(int i=n;i>0;i--)
+        {
+            for(int j=0;j<n-i;j++)
+            {
+                System.out.print(" ");
+            }
+            for(int k=0;k<2*i-1;k++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+  //Pattern 9
+   public static void nStarDiamond(int n) {
+        // Write your code here
+        for(int i=0;i<n;i++)
+        {
+            for(int j=1;j<n-i;j++)
+            {
+                System.out.print(" ");
+            }
+            for(int k=0;k<2*i+1;k++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        for(int i=n;i>0;i--)
+        {
+            for(int j=0;j<n-i;j++)
+            {
+                System.out.print(" ");
+            }
+            for(int k=0;k<2*i-1;k++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+  //pattern 10
+   public static void nStarTriangle(int n) {
+        // Write your code here
+        for(int i=0;i<n;i++)
+        {
+            for(int j=n;j>=n-i;j--)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        for(int i=1;i<n;i++)
+        {
+            for(int j=0;j<n-i;j++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+  //pattern 11
+   public static void nBinaryTriangle(int n) {
+        // Write your code here.
+        int start=0;
+        for(int i=0;i<n;i++)
+        {
+            if(i%2==0)
+            {
+                start =1;
+            }
+            else{
+                start=0;
+            }
+            for(int j=n;j>=n-i;j--)
+            {
+                System.out.print(start+ " ");
+                start=1-start;
+            }
+            System.out.println();
+        }
+    }
+  //pattern 12
+   public static void numberCrown(int n) {
+        // Write your code here.
+            
+        int space=2*(n-1);
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=i;j++)
+            {
+                System.out.print(j+" ");
+            }
+            for(int j=1;j<=space;j++)
+            {
+                System.out.print("  ");
+            }
+            for(int k=i;k>=1;k--)
+            {
+                System.out.print(k+" ");
+            }
+            System.out.println();
+            space-=2;  
+        }
+    }
+  //pattern 13
+   public static void nNumberTriangle(int n) {
+        // Write your code here
+         int num=1;
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=i;j++)
+            {
+                System.out.print(num+" ");
+                num++;
+            }
+            
+            System.out.println();
+        }
+    }
+  //pattern 14
+   public static void nLetterTriangle(int n) {
+        // Write your code here
+         for(int i=0;i<n;i++)
+        {
+            for(char ch='A';ch<='A'+i;ch++)
+            {
+                System.out.print(ch+" ");
+            }
+            
+            System.out.println();
+        }
+    }
+  //pattern 15
+   public static void nLetterTriangle(int n) {
+        // Write your code here
+         for(int i=0;i<n;i++)
+        {
+            for(char ch='A';ch<'A'+(n-i);ch++)
+            {
+                System.out.print(ch+" ");
+            }
+            System.out.println();
+        }
+    }
+  //pattern 16
+   public static void alphaHill(int n) {
+        // Write your code here
+        for(int i=0;i<n;i++)
+        {
+            for(int j=1;j<n-i;j++)
+            {
+                System.out.print(" ");
+            }
+            char ch='A';
+            int breakPoint=(2*i+1)/2;
+            for(int k=1;k<=2*i+1;k++)
+            {
+                System.out.print(ch+" ");
+                if(k<=breakPoint)
+                {
+                    ch++;
+                }
+                else{
+                    ch--;
+                }
+            }
+            System.out.println(); 
+        }
+    }
+  //pattern 17
+   public static void alphaHill(int n) {
+        // Write your code here
+        for(int i=0;i<n;i++)
+        {
+            for(int j=1;j<n-i;j++)
+            {
+                System.out.print(" ");
+            }
+            char ch='A';
+            int breakPoint=(2*i+1)/2;
+            for(int k=1;k<=2*i+1;k++)
+            {
+                System.out.print(ch+" ");
+                if(k<=breakPoint)
+                {
+                    ch++;
+                }
+                else{
+                    ch--;
+                }
+            }
+            System.out.println(); 
+        }
+    }
+  //pattern 18
+   public static void alphaTriangle(int n) {
+        // Write your code here
+      for(int i=0;i<n;i++)
+        {
+       
+            for(int j=0;j<=i;j++)
+            {
+               char ch =(char)('A'+n-1-j);
+               System.out.print(ch +" ");
+            }
+            System.out.println();
+        }
+    }
+  //pattern 19
+   public static void symmetry(int n) {
+        // Write your code here
+        for(int i=0;i<n;i++)
+        {
+            for(int j=0;j<n-i;j++)
+            {
+                System.out.print("* ");
+            }
+            for(int k=1;k<2*i+1;k++)
+            {
+                System.out.print("  ");
+            }
+            for(int j=0;j<n-i;j++)
+            {
+                System.out.print("* ");
+            }
+            System.out.println(); 
+        }
+
+        for(int i=n;i>0;i--)
+        {
+            for(int j=0;j<=n-i;j++)
+            {
+                System.out.print("* ");
+            }
+            for(int k=1;k<2*i-1;k++)
+            {
+                System.out.print("  ");
+            }
+            for(int j=0;j<=n-i;j++)
+            {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+  //pattern 20
+  public static void symmetry(int n) {
+        // Write your code here
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=i;j++){
+                System.out.print("*" +" ");
+            }for(int l=1;l<=2*n-(2*i);l++){
+                System.out.print(" "+" ");
+            }
+            for(int m=1;m<=i;m++){
+                System.out.print("*"+" ");
+            }
+            System.out.println();
+
+        }
+        for(int i=n-1;i>=1;i--){
+            for(int j=1;j<=i;j++){
+                System.out.print("*"+" ");
+            }for(int l=1;l<=2*n-(2*i);l++){
+                System.out.print(" "+" ");
+            }
+            for(int m=1;m<=i;m++){
+                System.out.print("*"+" ");
+            }
+            System.out.println();
+        }
+    //pattern 21
+      public static void getStarPattern(int n) {
+        // Write your code here
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=n;j++)
+            {
+                if( i==1 || j==1 || i==n || j==n)
+                {
+                    System.out.print("*");
+                }
+                else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+    //pattern 22
+      public static void getNumberPattern(int n) {
+        // Write your code here.
+          int k = 2*n-1;
+        for(int i=0;i<k;i++)
+        {
+            for(int j=0;j<k;j++)
+            {
+                int value = Math.max(Math.abs(i-(n-1)), Math.abs(j-(n-1))) +1;
+                System.out.print(value);
+            }
+            System.out.println();
+        }
+    }
+        }
+  
+}
