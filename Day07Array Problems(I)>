@@ -1,0 +1,65 @@
+//program 9
+public static int[] unionArray(int[] nums1, int[] nums2)
+    {Set<Integer>union=new LinkedHashSet<>();
+        for(int i: nums1)
+        {
+            union.add(i);
+        } 
+        for(int i:nums2)
+        {
+            union.add(i);
+        }
+        List<Integer>sortedList = new ArrayList<>(union);
+        Collections.sort(sortedList);
+        int[] result = new int[sortedList.size()];
+        for(int i=0;i<sortedList.size();i++)
+        {
+            result[i]=sortedList.get(i);
+        }
+        for(int i: result)
+        {
+            System.out.print(i+" ");
+        }
+        return result;
+    }
+//program7
+public static void moveZeroes(int[] nums)
+    {
+        int index=0;
+        for(int i=0;i<nums.length;i++)
+        {
+            if(nums[i]!=0)
+            {
+                nums[index]=nums[i];
+                index++;
+            }
+        }
+        while(index<nums.length)
+        {
+            nums[index]=0;
+        } 
+    }
+//program 13 , 14
+public static int longestSubArray(int[] arr, int k)
+    {
+        Map<Integer,Integer> map = new HashMap<>();
+        int sum =0, maxlength=0;
+        for(int i=0;i<arr.length;i++)
+        {
+            sum+=arr[i];
+            if(sum==k)
+            {
+                maxlength=i+1;
+            }
+            if(map.containsKey(sum-k))
+            {
+                int len = i-map.get(sum-k);
+                maxlength=Math.max(maxlength, len);
+            }
+            if(!map.containsKey(sum))
+            {
+                map.put(sum, i);
+            }
+        }
+        return maxlength;
+    }
